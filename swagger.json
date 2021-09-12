@@ -17,6 +17,30 @@
     "http"
   ],
   "paths": {
+	"/topics": {
+      "get": {
+        "tags": [
+          "topic"
+        ],
+        "summary": "List all topics",
+        "description": "Returns a list of all topics and their IDs. Does not include the long description; get the full topic to see that.",
+        "operationId": "getAllTopics",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+			  "type": "array",
+			  "items": {
+				"$ref": "#/definitions/Topic"
+			  }
+            }
+          }
+        }
+      }
+	},
     "/topics/{topicId}": {
       "get": {
         "tags": [
@@ -44,11 +68,8 @@
             "schema": {
               "$ref": "#/definitions/Topic"
             }
-          },
-          "404": {
-            "description": "Topic not found"
           }
-        }
+		}
       }
 	}
   },
@@ -60,6 +81,10 @@
           "type": "string",
           "format": "uuid"
         },
+		"model": {
+			"type": "string",
+			"enum": "docstore.topic"
+		},
         "short_desc": {
           "type": "string",
 		  "maxLength": 255
