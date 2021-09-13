@@ -17,7 +17,7 @@
     "https"
   ],
   "paths": {
-	"/topics": {
+	"/topics/": {
 	  "post": {
         "tags": [
           "topic"
@@ -43,10 +43,7 @@
           "201": {
             "description": "Topic was successfully created.",
             "schema": {
-			  "type": "array",
-			  "items": {
-				"$ref": "#/definitions/Topic"
-			  }
+              "$ref": "#/definitions/Topic"
             }
           },
           "400": {
@@ -77,7 +74,7 @@
         }
       }
 	},
-    "/topics/{topicId}": {
+    "/topics/{topicId}/": {
       "get": {
         "tags": [
           "topic"
