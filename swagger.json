@@ -390,7 +390,6 @@
         "parent": {
           "type": "string",
           "format": "uuid",
-          "nullable": true,
           "description": "The Folder that contains this one. If this is null, this Folder resides at the root ('/') of the document store."
         },
         "topics": {
