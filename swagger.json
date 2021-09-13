@@ -182,6 +182,7 @@
   "definitions": {
     "Topic": {
       "type": "object",
+	  "description": "A topic of a Document or Folder that specifies what the associated object contains information on. Can be used for sorting or filtering.",
       "properties": {
         "id": {
           "type": "string",
