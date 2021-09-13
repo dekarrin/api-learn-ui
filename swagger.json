@@ -193,6 +193,12 @@
         "produces": [
           "application/json"
         ],
+		"parameters": {
+			"name": "topic",
+			"in": "query",
+			"description": "Filter folders to those that have the given topic",
+			"type": "string"
+		},
         "responses": {
           "200": {
             "description": "All folders were successfully retrieved",
