@@ -18,7 +18,7 @@
   ],
   "paths": {
 	"/topics": {
-      "post": {
+	  "post": {
         "tags": [
           "topic"
         ],
@@ -39,9 +39,7 @@
             }
           }
         }
-      }
-	},
-	"/topics": {
+      },
       "get": {
         "tags": [
           "topic"
