@@ -18,6 +18,28 @@
   ],
   "paths": {
 	"/topics/": {
+      "get": {
+        "tags": [
+          "topic"
+        ],
+        "summary": "List all topics",
+        "description": "Returns a list of all topics and their IDs.",
+        "operationId": "getAllTopics",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "All topics were successfully retrieved",
+            "schema": {
+			  "type": "array",
+			  "items": {
+				"$ref": "#/definitions/Topic"
+			  }
+            }
+          }
+        }
+      },
 	  "post": {
         "tags": [
           "topic"
@@ -48,28 +70,6 @@
           },
           "400": {
             "description": "Problem with the request payload"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "topic"
-        ],
-        "summary": "List all topics",
-        "description": "Returns a list of all topics and their IDs.",
-        "operationId": "getAllTopics",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "All topics were successfully retrieved",
-            "schema": {
-			  "type": "array",
-			  "items": {
-				"$ref": "#/definitions/Topic"
-			  }
-            }
           }
         }
       }
