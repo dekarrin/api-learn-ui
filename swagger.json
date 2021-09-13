@@ -191,7 +191,7 @@
           "type": "string",
           "maxLength": 255
         },
-        "long_desc": {
+        "full_desc": {
           "type": "string"
         }
       }
