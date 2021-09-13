@@ -12,10 +12,10 @@
       "name": "topic",
       "description": "A description of a document/folder's contents. Allows grouping and filtering."
     },
-	{
-		"name": "folder",
-		"description": "A unit of logical organization that holds documents and other folders."
-	}
+    {
+        "name": "folder",
+        "description": "A unit of logical organization that holds documents and other folders."
+    }
   ],
   "schemes": [
     "https"
@@ -182,7 +182,7 @@
         }
       }
     },
-	"/folders/": {
+    "/folders/": {
       "get": {
         "tags": [
           "folder"
@@ -193,12 +193,14 @@
         "produces": [
           "application/json"
         ],
-		"parameters": {
-			"name": "topic",
-			"in": "query",
-			"description": "Filter folders to those that have the given topic",
-			"type": "string"
-		},
+        "parameters": [
+            {
+                "name": "topic",
+                "in": "query",
+                "description": "Filter folders to those that have the given topic",
+                "type": "string"
+            }
+        ],
         "responses": {
           "200": {
             "description": "All folders were successfully retrieved",
@@ -353,7 +355,7 @@
   "definitions": {
     "Topic": {
       "type": "object",
-	  "description": "Specifies what a Document or Folder contains information on. Can be used for sorting or filtering.",
+      "description": "Specifies what a Document or Folder contains information on. Can be used for sorting or filtering.",
       "properties": {
         "id": {
           "type": "string",
@@ -371,9 +373,9 @@
         }
       }
     },
-	"Folder": {
+    "Folder": {
       "type": "object",
-	  "description": "Holds Documents and other Folders. The root path ('/') is not considered a Folder.",
+      "description": "Holds Documents and other Folders. The root path ('/') is not considered a Folder.",
       "properties": {
         "id": {
           "type": "string",
@@ -385,19 +387,19 @@
           "maxLength": 255,
           "description": "What the folder is called. Does not include parent folders."
         },
-		"parent": {
-		  "type": "string",
-		  "format": "uuid",
-		  "nullable": true,
-		  "description": "The Folder that contains this one. If this is null, this Folder resides at the root ('/') of the document store."
-		},
+        "parent": {
+          "type": "string",
+          "format": "uuid",
+          "nullable": true,
+          "description": "The Folder that contains this one. If this is null, this Folder resides at the root ('/') of the document store."
+        },
         "topics": {
           "type": "array",
-		  "items": {
-			"type": "string",
-			"format": "uuid"
-		  },
-		  "description": "A list of UUIDs of the Topics that are associated with this Folder."
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": "A list of UUIDs of the Topics that are associated with this Folder."
         }
       }
     }
