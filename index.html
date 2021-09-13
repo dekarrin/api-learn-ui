@@ -3,58 +3,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Swagger UI</title>
-    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
-    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
-    <style>
-      html
-      {
-        box-sizing: border-box;
-        overflow: -moz-scrollbars-vertical;
-        overflow-y: scroll;
-      }
-
-      *,
-      *:before,
-      *:after
-      {
-        box-sizing: inherit;
-      }
-
-      body
-      {
-        margin:0;
-        background: #fafafa;
-      }
-    </style>
+    <title>Spekit Coding Project</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
   </head>
 
   <body>
-    <div id="swagger-ui"></div>
-
-    <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
-    <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
-    <script>
-    window.onload = function() {
-      // Begin Swagger UI call region
-      const ui = SwaggerUIBundle({
-        url: "https://www.dekarrin.com/docstore-ui/swagger.json",
-        dom_id: '#swagger-ui',
-        deepLinking: true,
-        presets: [
-          SwaggerUIBundle.presets.apis,
-          SwaggerUIStandalonePreset
-        ],
-        plugins: [
-          SwaggerUIBundle.plugins.DownloadUrl
-        ],
-        layout: "StandaloneLayout"
-      });
-      // End Swagger UI call region
-
-      window.ui = ui;
-    };
-  </script>
+	<h1>Spekit Coding Project</h1>
+	<h2>Rebecca C. Nelson</h2>
+	<hr />
+	<p>This is my published example of the Take-Home coding project for Spekit. It was published on the weekend of 9/11/2021.</p>
+	<p>It is deployed on Heroku at <a href="https://cryptic-crag-50223.herokuapp.com/">https://cryptic-crag-50223.herokuapp.com/</a> (Note: this will lead to a 404 as this is not a defined endpoint in the REST service). For usage and documentation of the REST API service for the document store, see the <a href="./swagger.html">Swagger UI Spec</p>.
+	<p>The initial design was based on the following ER diagram for the Document, Folder, and Topic entities:</p>
+	<p><img src="erd.jpg" alt="Entity-Relation diagram" /></p>
+	<p>For further documention on the REST service itself, see the <a href="./swagger.html">Swagger UI Spec</p>.
   </body>
 </html>

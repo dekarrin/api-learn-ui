@@ -366,7 +366,7 @@
             {
                 "name": "topic",
                 "in": "query",
-                "description": "Filter docuemnts to those that have the given topic",
+                "description": "Filter documents to those that have the given topic",
                 "type": "string"
             },
             {
