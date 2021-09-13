@@ -171,7 +171,7 @@
         ],
         "responses": {
           "204": {
-            "description": "After deleting, the topic with the given ID no longer exists.",
+            "description": "After deleting, the topic with the given ID no longer exists."
           }
 		}
       }
