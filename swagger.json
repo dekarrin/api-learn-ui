@@ -48,6 +48,9 @@
 				"$ref": "#/definitions/Topic"
 			  }
             }
+          },
+          "400": {
+            "description": "Problem with the request payload"
           }
         }
       },
@@ -63,7 +66,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "All topics were successfully retrieved",
             "schema": {
 			  "type": "array",
 			  "items": {
@@ -173,7 +176,7 @@
         ],
         "responses": {
           "204": {
-            "description": "After deleting, the topic with the given ID no longer exists."
+            "description": "The topic with the given ID has been successfully deleted, if it existed."
           }
 		}
       }
