@@ -185,7 +185,7 @@
 	"/folders/": {
       "get": {
         "tags": [
-          "folders"
+          "folder"
         ],
         "summary": "List all folders",
         "description": "Returns a list of all folders and their IDs.",
